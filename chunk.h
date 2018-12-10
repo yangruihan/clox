@@ -5,6 +5,12 @@
 #include "value.h"
 
 typedef enum {
+    // 2 byte
+    // opcode | constant index
+    OP_CONSTANT,
+    
+    // 1 byte
+    // opcode
     OP_RETURN,
 } OpCode;
 
