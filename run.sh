@@ -1,1 +1,1 @@
-gcc main.c -o bin/clox && ./bin/clox
+gcc *.c -o bin/clox && ./bin/clox

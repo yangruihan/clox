@@ -1,4 +1,4 @@
-#idndef clox_memory_h
+#ifndef clox_memory_h
 #define clox_memory_h
 
 #define GROW_CAPACITY(capacity) \
@@ -9,7 +9,7 @@
                       sizeof(type) * (count))
 
 #define FREE_ARRAY(type, pointer, oldCount) \
-    reallocate(pointer, sizeof(type) * (old_count), 0)
+    reallocate(pointer, sizeof(type) * (oldCount), 0)
 
 void* reallocate(void* previous,
                  size_t oldSize,
