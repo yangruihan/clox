@@ -9,6 +9,12 @@ typedef enum {
     // opcode | constant index
     OP_CONSTANT,
 
+    OP_NIL,
+    OP_TRUE,
+    OP_FALSE,
+    
+    // 1 byte
+    // opcode
     OP_ADD,
     OP_SUBTRACT,
     OP_MULTIPLY,
