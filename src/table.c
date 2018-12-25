@@ -128,7 +128,7 @@ ObjString* tableFindString(Table* table, const char* chars, int length, uint32_t
         if (entry->key == NULL) return NULL;
 
         if (entry->key->length == length
-            && memcpy(entry->key->chars, chars, length) == 0) {
+            && memcmp(entry->key->chars, chars, length) == 0) {
             return entry->key;
         }
 
