@@ -117,3 +117,22 @@ void tableAddAll(Table* from, Table* to) {
     }
 }
 
+ObjString* tableFindString(Table* table, const char* chars, int length, uint32_t hash) {
+    if (table->entries == NULL) return NULL;
+
+    uint32_t index = hash % table->capacity;
+
+    for (;;) {
+        Entry* entry = &table->entries[index];
+
+        if (entry->key == NULL) return NULL;
+
+        if (entry->key->length == length
+            && memcpy(entry->key->chars, chars, length) == 0) {
+            return entry->key;
+        }
+
+        index = (index + 1) % table->capacity;
+    }
+}
+
