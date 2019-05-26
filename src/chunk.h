@@ -5,12 +5,9 @@
 #include "value.h"
 
 typedef enum {
-    // 2 byte
-    // opcode | constant index
+
     OP_CONSTANT,
 
-    // 1 byte
-    // opcode
     OP_NIL,
     OP_TRUE,
     OP_FALSE,
@@ -25,8 +22,6 @@ typedef enum {
     OP_GREATER,
     OP_LESS,
     
-    // 1 byte
-    // opcode
     OP_ADD,
     OP_SUBTRACT,
     OP_MULTIPLY,
@@ -34,9 +29,9 @@ typedef enum {
     OP_NOT,
     OP_NEGATE,
     OP_PRINT,
+
+    OP_JUMP_IF_FALSE,
     
-    // 1 byte
-    // opcode
     OP_RETURN,
 } OpCode;
 
