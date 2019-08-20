@@ -80,6 +80,7 @@ void printObject(Value value) {
     case OBJ_FUNCTION:
         if (AS_FUNCTION(value)->name == NULL) {
             printf("<script>");
+            break;
         }
         printf("<fn %s>", AS_FUNCTION(value)->name->chars);
         break;
