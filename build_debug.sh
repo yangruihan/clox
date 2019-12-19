@@ -12,4 +12,4 @@ if [ ! -d "bin/Test" ]; then
     mkdir -p bin/Test
 fi
 
-cd build/CMake/Debug && cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG=ON ../../../ && make -j
+cd build/CMake/Debug && cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG=ON -DDEBUG_TRACE_EXECUTION=ON -DDEBUG_PRINT_CODE=ON ../../../ && make -j
