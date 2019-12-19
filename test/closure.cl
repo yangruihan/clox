@@ -9,5 +9,11 @@ fun outer() {
         fun inner() {
             print a + c + b + d;
         }
+
+        inner();
     }
+
+    middle();
 }
+
+outer();
