@@ -21,6 +21,14 @@ if(DEBUG_PRINT_CODE)
     add_definitions(-DDEBUG_PRINT_CODE)
 endif(DEBUG_PRINT_CODE)
 
+if (DEBUG_STRESS_GC)
+    add_definitions(-DDEBUG_STRESS_GC)
+endif(DEBUG_STRESS_GC)
+
+if (DEBUG_LOG_GC)
+    add_definitions(-DDEBUG_LOG_GC)
+endif(DEBUG_LOG_GC)
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
