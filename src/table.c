@@ -137,7 +137,7 @@ ObjString* tableFindString(Table* table, const char* chars, int length, uint32_t
         }
 
         // Try the next slot.
-        index = (index + 1) & table->capacity;
+        index = (index + 1) % table->capacity;
     }
 }
 
